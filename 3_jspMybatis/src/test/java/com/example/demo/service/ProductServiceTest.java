@@ -13,10 +13,10 @@ import com.example.demo.vo.Product;
 public class ProductServiceTest {
 	@Autowired
 	ProductServiceImpl psi;
-	//@Test
+	@Test
 	public void addProductTest()
 	{
-		psi.addProduct(new Product("p003","ruler",50));
+		psi.addProduct(new Product("p001","ruler",50));
 		System.out.println("新增成功");
 	}
 	//@Test
@@ -34,8 +34,8 @@ public class ProductServiceTest {
 		System.out.println(psi.queryByProductno("p001"));
 		
 	}
-	@Test
-	public void updateProduct()
+	//@Test
+	public void updateProductTest()
 	{
 		psi.updateProduct(1, "p001","lcd" , 1000);
 		System.out.println("更改成功");

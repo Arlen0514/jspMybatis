@@ -13,7 +13,7 @@ import com.example.demo.vo.Product;
 @Mapper
 public interface ProductMapper {
 	//create
-	@Insert("insert into product(productno,productname,price) values(#{productno},#{productname},#{price})")
+	@Insert("insert into product(productno,productname,price)  values(#{productno},#{productname},#{price})")
 	void add(Product p);
 	//read
 	@Select("select * from product")

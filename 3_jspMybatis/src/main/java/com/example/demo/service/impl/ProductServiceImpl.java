@@ -26,8 +26,16 @@ public class ProductServiceImpl implements ProductService{
 
 	@Override
 	public String queryAll2() {
-		// TODO Auto-generated method stub
-		return null;
+		String show=" ";
+		List<Product> l=queryAll();
+		for(Product p:l)
+		{
+			show=show+"<tr><td>"+p.getId()+"<td>"+p.getProductno()
+                                  +"<td>"+p.getProductname()
+                                 +"<td>"+p.getPrice();
+			
+		}
+		return show;
 	}
 
 	@Override
@@ -54,6 +62,17 @@ public class ProductServiceImpl implements ProductService{
 		p.setProductno(productno);
 		p.setProductname(productname);
 		p.setPrice(price);
+		pm.update(p);
+		
+	}
+	
+	@Override
+	public void updateProduct(int id, String productname, int price) {
+		Product p=queryById(id);
+		p.setProductname(productname);
+		p.setPrice(price);
+		
+		
 		pm.update(p);
 		
 	}

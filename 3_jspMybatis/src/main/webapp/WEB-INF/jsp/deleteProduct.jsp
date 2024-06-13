@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +11,10 @@
 	<div class="header"></div>
 	<div class="content">
 		<div class="content_1">
-			<a href="product.html">進入產品管理頁</a>
+		<form action="delete" mehtod="get">
+		id:<input type="text" name="id">
+		<input type="submit" value="ok">
+		</form>
 		</div>
 	</div>
 	<div class="footer"></div>

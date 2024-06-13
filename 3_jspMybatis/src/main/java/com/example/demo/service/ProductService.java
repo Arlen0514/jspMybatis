@@ -14,6 +14,7 @@ public interface ProductService {
 	Product queryByProductname(String productname);
 	
 	void updateProduct(int id,String productno,String productname,int price);
+	void updateProduct(int id,String productname,int price);
 	
 	void deleteProduct(int id);
 
